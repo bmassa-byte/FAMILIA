@@ -59,22 +59,22 @@ const Navbar = () => {
   };
 
   return (
-    <header className="fixed top-4 w-full z-50 px-4">
+    <header className="fixed top-2 md:top-4 w-full z-50 px-2 md:px-4">
       <nav className="max-w-7xl mx-auto bg-white/90 backdrop-blur-md border border-slate-200 shadow-lg rounded-none transition-all duration-500 overflow-hidden">
         <div className="px-4 sm:px-6 lg:px-10">
           <div className="flex justify-between h-16 md:h-18 items-center">
             <div className="flex items-center gap-2 lg:gap-3 cursor-pointer shrink-0" onClick={() => scrollTo('hero')}>
               <div className="relative flex items-center justify-center">
-                <Scale className="h-6 w-6 lg:h-7 lg:w-7 text-primary" strokeWidth={1.5} />
+                <Scale className="h-8 w-8 lg:h-9 lg:w-9 text-primary" strokeWidth={1.5} />
                 <div className="absolute -bottom-1 -right-2 bg-white rounded-full p-0.5 shadow-sm">
-                  <Users className="h-3 w-3 lg:h-3.5 lg:w-3.5 text-primary" strokeWidth={2.5} />
+                  <Users className="h-4 w-4 lg:h-4.5 lg:w-4.5 text-primary" strokeWidth={2.5} />
                 </div>
               </div>
               <div className="flex flex-col ml-1.5 items-start justify-center">
-                <span className="font-serif text-base lg:text-lg font-bold text-primary leading-tight whitespace-nowrap">
+                <span className="font-serif text-xl lg:text-2xl font-bold text-primary leading-tight whitespace-nowrap">
                   Legal Familia
                 </span>
-                <span className="text-[6px] lg:text-[7px] text-accent font-bold tracking-widest uppercase text-left mt-0.5">
+                <span className="text-[8px] lg:text-[9px] text-accent font-bold tracking-widest uppercase text-left mt-0.5">
                   ESPECIALISTAS EN DERECHO DE FAMILIA
                 </span>
               </div>
@@ -123,7 +123,7 @@ const Navbar = () => {
 
 const Hero = () => {
   return (
-    <section id="hero" className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-bg transition-colors duration-500">
+    <section id="hero" className="relative min-h-[100dvh] flex items-center pt-32 pb-16 md:pt-20 md:pb-0 overflow-hidden bg-bg transition-colors duration-500">
       <div className="absolute inset-0 z-0">
         <img 
           src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80&w=2000" 
@@ -134,26 +134,26 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-bg/80 to-bg"></div>
       </div>
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-4xl lg:max-w-5xl">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+        <div className="max-w-4xl lg:max-w-5xl mx-auto md:mx-0 text-left">
           <div>
-            <span className="inline-block py-1 px-3 md:py-1.5 md:px-4 rounded-full bg-primary/10 text-primary-dark text-[10px] md:text-xs font-bold tracking-wider md:tracking-[0.15em] uppercase mb-4 md:mb-8 whitespace-nowrap">
+            <span className="inline-block py-1.5 px-4 rounded-full bg-primary/10 text-primary-dark text-xs font-bold tracking-widest uppercase mb-6 md:mb-8">
               ABOGADOS ESPECIALISTAS
             </span>
-            <h1 className="text-2xl md:text-5xl lg:text-[56px] font-bold text-text-main leading-[1.15] tracking-[-0.02em] mb-4 md:mb-8">
+            <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-bold text-text-main leading-[1.1] tracking-[-0.02em] mb-5 md:mb-8">
               Tranquilidad para vos y tu familia en cada paso del proceso
             </h1>
-            <p className="text-base md:text-xl text-slate-600 mb-4 md:mb-12 leading-relaxed md:leading-[1.8] max-w-3xl font-medium">
+            <p className="text-lg md:text-xl text-slate-600 mb-8 md:mb-12 leading-relaxed md:leading-[1.8] max-w-3xl mx-auto md:mx-0 font-medium">
               <span className="underline decoration-primary decoration-2 underline-offset-4 font-bold">Expertos en Derecho de Familia.</span> Protegemos lo que más te importa con absoluta reserva y respaldo legal.
             </p>
             
-            <div className="flex flex-col md:flex-row gap-3 md:gap-4 mb-6 md:mb-10 items-center md:items-stretch">
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mb-10 md:mb-12 items-stretch sm:items-center justify-start">
               <a 
                 href="https://wa.me/59892402193?text=Hola,%20vengo%20de%20la%20web%20y%20necesito%20asesoramiento%20sobre..." 
                 target="_blank" 
                 rel="noopener noreferrer"
                 onClick={handleConversion}
-                className="bg-accent text-[#111827] border-[1.5px] border-accent hover:bg-transparent hover:border-[#25D366] hover:text-[#25D366] active:bg-transparent active:border-[#25D366] active:text-[#25D366] focus:bg-transparent focus:border-[#25D366] focus:text-[#25D366] px-8 py-4 md:py-5 rounded-[12px] font-bold text-base md:text-lg shadow-sm transition-all flex items-center justify-center gap-2 w-full md:w-auto"
+                className="bg-accent text-[#111827] border-[1.5px] border-accent hover:bg-transparent hover:border-[#25D366] hover:text-[#25D366] active:bg-transparent active:border-[#25D366] active:text-[#25D366] focus:bg-transparent focus:border-[#25D366] focus:text-[#25D366] px-8 py-4 rounded-[12px] font-bold text-base md:text-lg shadow-sm transition-all flex items-center justify-center sm:justify-start gap-2 w-full sm:w-auto"
               >
                 <WhatsAppIcon className="w-5 h-5" />
                 Consulta Inmediata
@@ -164,24 +164,24 @@ const Hero = () => {
                   e.preventDefault();
                   document.getElementById('formulario')?.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="text-primary hover:text-accent active:text-accent focus:text-accent px-4 py-3 md:py-5 font-bold text-base md:text-lg transition-all flex items-center justify-center gap-2 w-full md:w-auto"
+                className="text-primary hover:text-accent active:text-accent focus:text-accent px-4 py-4 font-bold text-base md:text-lg transition-all flex items-center justify-center sm:justify-start gap-2 w-full sm:w-auto"
               >
                 Dejanos tu caso
                 <ChevronRight className="w-5 h-5" />
               </a>
             </div>
             
-            <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-slate-600 font-medium">
-              <div className="flex items-center gap-2 bg-white/60 px-3 py-1.5 rounded-full border border-slate-200">
-                <ShieldCheck className="w-4 h-4 text-primary" aria-label="Abogados Familia Uruguay" />
+            <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center justify-start gap-3 md:gap-x-6 md:gap-y-3 text-xs md:text-sm text-slate-600 font-medium">
+              <div className="flex items-center gap-3 bg-white/80 md:bg-white/60 px-5 py-3 md:px-3 md:py-1.5 rounded-xl md:rounded-full border border-slate-200 w-full sm:w-auto justify-start shadow-sm md:shadow-none">
+                <ShieldCheck className="w-5 h-5 md:w-4 md:h-4 text-primary shrink-0" aria-label="Abogados Familia Uruguay" />
                 <span>Atención confidencial</span>
               </div>
-              <div className="flex items-center gap-2 bg-white/60 px-3 py-1.5 rounded-full border border-slate-200">
-                <Scale className="w-4 h-4 text-primary" aria-label="Abogados Familia Uruguay" />
+              <div className="flex items-center gap-3 bg-white/80 md:bg-white/60 px-5 py-3 md:px-3 md:py-1.5 rounded-xl md:rounded-full border border-slate-200 w-full sm:w-auto justify-start shadow-sm md:shadow-none">
+                <Scale className="w-5 h-5 md:w-4 md:h-4 text-primary shrink-0" aria-label="Abogados Familia Uruguay" />
                 <span>+10 años de experiencia</span>
               </div>
-              <div className="flex items-center gap-2 bg-white/60 px-3 py-1.5 rounded-full border border-slate-200">
-                <Clock className="w-4 h-4 text-primary" aria-label="Abogados Familia Uruguay" />
+              <div className="flex items-center gap-3 bg-white/80 md:bg-white/60 px-5 py-3 md:px-3 md:py-1.5 rounded-xl md:rounded-full border border-slate-200 w-full sm:w-auto justify-start shadow-sm md:shadow-none">
+                <Clock className="w-4 h-4 md:w-4 md:h-4 text-primary" aria-label="Abogados Familia Uruguay" />
                 <span>Respuesta en el día</span>
               </div>
             </div>
@@ -219,8 +219,8 @@ const Services = () => {
   return (
     <section id="servicios" className="py-16 md:py-24 bg-white transition-colors duration-500">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-10 md:mb-16">
-          <h2 className="text-2xl md:text-4xl font-serif font-bold text-primary mb-4">Nuestras Áreas de Práctica</h2>
+        <div className="text-left max-w-3xl mb-10 md:mb-16">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-4">Nuestras Áreas de Práctica</h2>
           <p className="text-base md:text-lg text-slate-600">
             Brindamos soluciones legales claras y efectivas para proteger tus derechos y los de tu familia en cada etapa del proceso.
           </p>
@@ -234,7 +234,7 @@ const Services = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-bg rounded-2xl p-8 border border-slate-200 transition-all hover:shadow-xl active:shadow-md active:scale-[0.99] group cursor-default"
+              className="bg-bg rounded-2xl p-6 md:p-8 border border-slate-200 transition-all hover:shadow-xl active:shadow-md active:scale-[0.99] group cursor-default"
             >
               <div className="mb-6 w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:bg-primary/10 transition-colors">
                 {service.icon}
@@ -340,24 +340,24 @@ const Process = () => {
   return (
     <section className="py-24 bg-bg transition-colors duration-500">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-2xl md:text-4xl font-serif font-bold text-primary mb-4">¿Cómo trabajamos?</h2>
+        <div className="text-left max-w-3xl mb-12 md:mb-16">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-4">¿Cómo trabajamos?</h2>
           <p className="text-base md:text-lg text-slate-600">
             Un proceso simple y transparente, diseñado para darte tranquilidad desde el primer momento.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 relative">
+        <div className="grid md:grid-cols-3 gap-8 md:gap-12 relative">
           {steps.map((step, index) => (
             <div 
               key={index}
-              className="relative z-10 flex flex-col items-center text-center"
+              className="relative z-10 flex flex-col items-start text-left bg-white p-8 rounded-2xl border border-slate-200 shadow-sm"
             >
-              <div className="mb-4">
+              <div className="mb-6">
                 <span className="text-5xl md:text-6xl font-serif text-primary/80 italic">{step.number}.</span>
               </div>
-              <h3 className="text-lg md:text-xl font-bold text-primary mb-3">{step.title}</h3>
-              <p className="text-slate-600 leading-relaxed px-4">
+              <h3 className="text-xl font-bold text-primary mb-3">{step.title}</h3>
+              <p className="text-slate-600 leading-relaxed">
                 {step.description}
               </p>
             </div>
@@ -390,8 +390,8 @@ const Testimonials = () => {
   return (
     <section id="testimonios" className="py-24 bg-white transition-colors duration-500">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-2xl md:text-4xl font-serif font-bold text-primary mb-4">Lo que dicen nuestros clientes</h2>
+        <div className="text-left max-w-3xl mb-12 md:mb-16">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-4">Lo que dicen nuestros clientes</h2>
           <p className="text-base md:text-lg text-slate-600">
             La confianza de quienes ya pasaron por este proceso es nuestra mejor carta de presentación.
           </p>
@@ -401,7 +401,7 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <div 
               key={index}
-              className="bg-bg p-8 rounded-2xl relative border border-slate-200 flex flex-col h-full"
+              className="bg-bg p-6 md:p-8 rounded-2xl relative border border-slate-200 flex flex-col h-full"
             >
               <Quote className="w-10 h-10 text-slate-300 absolute top-6 left-6" />
               <div className="relative z-10 flex flex-col flex-grow">
@@ -413,6 +413,24 @@ const Testimonials = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="mt-12 md:mt-16 bg-slate-50 border border-slate-200 rounded-2xl p-8 md:p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-8 shadow-sm">
+          <div className="text-left max-w-2xl">
+            <h3 className="text-xl md:text-2xl font-serif font-bold text-primary mb-3">¿Ya confiaste en Legal Familia?</h3>
+            <p className="text-slate-600 leading-relaxed">
+              Nos encantaría conocer tu opinión. Tu testimonio nos ayuda a mantener la excelencia en nuestro servicio y brinda tranquilidad a futuras familias que necesitan respaldo legal.
+            </p>
+          </div>
+          <a 
+            href="https://wa.me/59892402193?text=Hola,%20fui%20cliente%20de%20Legal%20Familia%20y%20me%20gustar%C3%ADa%20compartir%20mi%20experiencia:" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="bg-white text-slate-700 border border-slate-200 hover:border-[#25D366] hover:text-[#25D366] px-6 py-4 rounded-xl font-bold transition-all flex items-center justify-center gap-2 w-full md:w-auto shadow-sm whitespace-nowrap shrink-0"
+          >
+            <WhatsAppIcon className="w-5 h-5 text-[#25D366]" />
+            Compartir mi experiencia
+          </a>
         </div>
       </div>
     </section>
@@ -437,7 +455,7 @@ const CTA = () => {
       </div>
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-primary rounded-3xl p-8 md:p-16 text-center shadow-2xl relative overflow-hidden">
+        <div className="bg-primary rounded-3xl p-8 md:p-16 text-left shadow-2xl relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-full opacity-[0.06] pointer-events-none">
             <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
               <defs>
@@ -463,20 +481,20 @@ const CTA = () => {
           </div>
           
           <div className="relative z-10">
-            <h2 className="text-2xl md:text-4xl font-serif font-bold text-white mb-6">
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-6">
               ¿Necesitas asesoramiento legal en temas de familia?
             </h2>
-            <p className="text-base md:text-lg text-slate-300 mb-10 max-w-2xl mx-auto">
+            <p className="text-base md:text-lg text-slate-300 mb-10 max-w-2xl">
               No dejes pasar más tiempo. Un buen asesoramiento a tiempo puede evitar conflictos mayores, ahorrar costos y proteger tus derechos fundamentales.
             </p>
             
-            <div className="flex flex-col sm:flex-row justify-center gap-4 items-center">
+            <div className="flex flex-col sm:flex-row justify-start gap-4 items-stretch sm:items-center">
               <a 
                 href="https://wa.me/59892402193?text=Hola,%20vengo%20de%20la%20web%20y%20necesito%20asesoramiento%20sobre..." 
                 target="_blank" 
                 rel="noopener noreferrer"
                 onClick={handleConversion}
-                className="bg-accent text-[#111827] border-[1.5px] border-accent hover:bg-transparent hover:border-[#25D366] hover:text-[#25D366] active:bg-transparent active:border-[#25D366] active:text-[#25D366] focus:bg-transparent focus:border-[#25D366] focus:text-[#25D366] px-8 py-4 rounded-[12px] font-bold text-base md:text-lg shadow-sm transition-all flex items-center justify-center gap-2 w-full sm:w-auto"
+                className="bg-accent text-[#111827] border-[1.5px] border-accent hover:bg-transparent hover:border-[#25D366] hover:text-[#25D366] active:bg-transparent active:border-[#25D366] active:text-[#25D366] focus:bg-transparent focus:border-[#25D366] focus:text-[#25D366] px-8 py-4 rounded-[12px] font-bold text-base md:text-lg shadow-sm transition-all flex items-center justify-center sm:justify-start gap-2 w-full sm:w-auto"
               >
                 <WhatsAppIcon className="w-5 h-5" />
                 Consulta Inmediata
@@ -487,7 +505,7 @@ const CTA = () => {
                   e.preventDefault();
                   document.getElementById('formulario')?.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="text-white hover:text-accent active:text-accent focus:text-accent px-4 py-3 font-bold text-base md:text-lg transition-all flex items-center justify-center gap-2 group w-full sm:w-auto"
+                className="text-white hover:text-accent active:text-accent focus:text-accent px-4 py-4 font-bold text-base md:text-lg transition-all flex items-center justify-center sm:justify-start gap-2 group w-full sm:w-auto"
               >
                 Dejanos tu caso
                 <ChevronRight className="w-5 h-5" />
@@ -747,7 +765,7 @@ const Footer = () => {
   return (
     <footer className="bg-slate-900 text-slate-400 py-12 border-t border-slate-900 transition-colors duration-500">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center justify-center gap-6">
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div className="flex items-center gap-3">
             <div className="relative flex items-center justify-center">
               <Scale className="h-8 w-8 text-slate-500" strokeWidth={1.5} />
@@ -765,7 +783,7 @@ const Footer = () => {
             </div>
           </div>
           
-          <div className="text-sm text-center">
+          <div className="text-sm text-left md:text-right">
             <p>&copy; 2026 Legal Familia. Todos los derechos reservados.</p>
           </div>
         </div>
@@ -785,6 +803,26 @@ const WhatsAppIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
+const FloatingWhatsApp = () => {
+  return (
+    <a
+      href="https://wa.me/59892402193?text=Hola,%20vengo%20de%20la%20web%20y%20necesito%20asesoramiento%20sobre..."
+      target="_blank"
+      rel="noopener noreferrer"
+      className="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-50 bg-[#25D366] text-white p-3 rounded-full shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group flex items-center justify-center"
+      aria-label="Contactar por WhatsApp"
+    >
+      <div className="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-20"></div>
+      <WhatsAppIcon className="w-7 h-7 relative z-10" />
+      
+      {/* Tooltip */}
+      <span className="absolute right-full mr-4 bg-white text-slate-800 text-sm font-bold px-4 py-2 rounded-xl shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap border border-slate-100 hidden md:block">
+        ¿Necesitas ayuda?
+      </span>
+    </a>
+  );
+};
+
 export default function App() {
   return (
     <div className="min-h-screen bg-bg font-sans text-text-main/80 selection:bg-primary/20 transition-colors duration-500">
@@ -799,6 +837,7 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
+      <FloatingWhatsApp />
     </div>
   );
 }
